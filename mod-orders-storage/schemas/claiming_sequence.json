@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "A claiming sequence: an ordered list of stages used to claim late pieces",
+  "type": "object",
+  "javaName": "ClaimingSequence",
+  "properties": {
+    "id": {
+      "description": "The unique id of this claiming sequence",
+      "$ref": "../../common/schemas/uuid.json"
+    },
+    "name": {
+      "description": "The name of this claiming sequence, unique per tenant (case and accent insensitive)",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "description": {
+      "description": "Description of this claiming sequence",
+      "type": "string"
+    },
+    "stages": {
+      "description": "Stages of this claiming sequence, ordered ascending by stage",
+      "type": "array",
+      "id": "claimingSequenceStages",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "$ref": "claiming_sequence_stage.json"
+      }
+    },
+    "afterLastStage": {
+      "description": "What happens when a piece should be claimed again after the last stage: STOP rejects the claim, REPEAT_LAST repeats the last stage",
+      "type": "string",
+      "enum": [
+        "STOP",
+        "REPEAT_LAST"
+      ],
+      "default": "STOP"
+    },
+    "isActive": {
+      "description": "Inactive claiming sequences cannot be selected for new PO lines",
+      "type": "boolean",
+      "default": true
+    },
+    "_version": {
+      "type": "integer",
+      "description": "Record version for optimistic locking"
+    },
+    "metadata": {
+      "type": "object",
+      "$ref": "../../../raml-util/schemas/metadata.schema",
+      "readonly": true
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "stages"
+  ]
+}

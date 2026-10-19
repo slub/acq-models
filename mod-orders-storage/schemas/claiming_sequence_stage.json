@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "A stage of a claiming sequence: one escalation level with its own interval and delivery",
+  "type": "object",
+  "javaName": "ClaimingSequenceStage",
+  "properties": {
+    "stage": {
+      "description": "Position of the stage in the sequence (1, 2, 3, ...). Set by the storage from the position in the stages list; a value sent by the client is overwritten",
+      "type": "integer",
+      "minimum": 1
+    },
+    "name": {
+      "description": "Display name of the stage, e.g. 1st claim. Not unique within the sequence",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "deliveryType": {
+      "description": "How the claim of this stage reaches the vendor: MANUAL outside FOLIO, INTEGRATION through a Claims integration of the vendor",
+      "type": "string",
+      "enum": [
+        "MANUAL",
+        "INTEGRATION"
+      ]
+    },
+    "transmissionMethod": {
+      "description": "Transmission method of the vendor's Claims integration to use; required for INTEGRATION, not allowed for MANUAL",
+      "type": "string",
+      "enum": [
+        "FTP",
+        "File download",
+        "Email"
+      ]
+    },
+    "interval": {
+      "description": "Time interval (in days) the vendor has after a claim of this stage",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3650
+    },
+    "internalNote": {
+      "description": "Internal note for claims sent at this stage",
+      "type": "string"
+    },
+    "externalNote": {
+      "description": "External note to share with the vendor for claims sent at this stage",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "deliveryType",
+    "interval"
+  ]
+}
