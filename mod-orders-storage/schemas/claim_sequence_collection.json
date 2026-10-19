@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "Collection of claiming sequences",
+  "description": "Collection of claim sequences",
   "type": "object",
   "properties": {
-    "claimingSequences": {
-      "description": "Collection of claiming sequences",
+    "claimSequences": {
+      "description": "Collection of claim sequences",
       "type": "array",
-      "id": "claimingSequences",
+      "id": "claimSequences",
       "items": {
         "type": "object",
-        "$ref": "claiming_sequence.json"
+        "$ref": "claim_sequence.json"
       }
     },
     "totalRecords": {
@@ -19,7 +19,7 @@
   },
   "additionalProperties": false,
   "required": [
-    "claimingSequences",
+    "claimSequences",
     "totalRecords"
   ]
 }
