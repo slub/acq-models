@@ -1,31 +1,31 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "A claiming sequence: an ordered list of stages used to claim late pieces",
+  "description": "A claim sequence: an ordered list of stages used to claim late pieces",
   "type": "object",
-  "javaName": "ClaimingSequence",
+  "javaName": "ClaimSequence",
   "properties": {
     "id": {
-      "description": "The unique id of this claiming sequence",
+      "description": "The unique id of this claim sequence",
       "$ref": "../../common/schemas/uuid.json"
     },
     "name": {
-      "description": "The name of this claiming sequence, unique per tenant (case and accent insensitive)",
+      "description": "The name of this claim sequence, unique per tenant (case and accent insensitive)",
       "type": "string",
       "minLength": 1,
       "maxLength": 255
     },
     "description": {
-      "description": "Description of this claiming sequence",
+      "description": "Description of this claim sequence",
       "type": "string"
     },
     "stages": {
-      "description": "Stages of this claiming sequence, ordered ascending by stage",
+      "description": "Stages of this claim sequence, ordered ascending by stage",
       "type": "array",
-      "id": "claimingSequenceStages",
+      "id": "claimSequenceStages",
       "minItems": 1,
       "items": {
         "type": "object",
-        "$ref": "claiming_sequence_stage.json"
+        "$ref": "claim_sequence_stage.json"
       }
     },
     "afterLastStage": {
@@ -38,7 +38,7 @@
       "default": "STOP"
     },
     "isActive": {
-      "description": "Inactive claiming sequences cannot be selected for new PO lines",
+      "description": "Inactive claim sequences cannot be selected for new PO lines",
       "type": "boolean",
       "default": true
     },

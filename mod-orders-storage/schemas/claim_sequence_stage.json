@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "A stage of a claiming sequence: one escalation level with its own interval and delivery",
+  "description": "A stage of a claim sequence: one escalation level with its own interval and delivery",
   "type": "object",
-  "javaName": "ClaimingSequenceStage",
+  "javaName": "ClaimSequenceStage",
   "properties": {
     "stage": {
       "description": "Position of the stage in the sequence (1, 2, 3, ...). Set by the storage from the position in the stages list; a value sent by the client is overwritten",
