@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "A piece written by a claim",
+  "type": "object",
+  "properties": {
+    "piece": {
+      "description": "The complete piece to store, including claimSequence",
+      "type": "object",
+      "$ref": "piece.json"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "piece"
+  ]
+}

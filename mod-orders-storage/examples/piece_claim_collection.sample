@@ -1,0 +1,41 @@
+{
+  "pieceClaims": [
+    {
+      "piece": {
+        "id": "5e317dc2-deeb-4429-b2a1-91e5cd0fd5f7",
+        "displaySummary": "Tutorial Volume 1",
+        "comment": "Special Edition",
+        "format": "Electronic",
+        "itemId": "522a501a-56b5-48d9-b28a-3a8f02482d97",
+        "bindItemId": "779b89f7-6c0f-42d0-bf50-4b0e30958d2d",
+        "locationId": "53cf956f-c1df-410b-8bea-27f712cca7c0",
+        "poLineId": "d471d766-8dbb-4609-999a-02681dea6c22",
+        "titleId": "9a665b22-9fe5-4c95-b4ee-837a5433c95d",
+        "receivingTenantId": "diku",
+        "displayOnHolding": false,
+        "displayToPublic": false,
+        "sequenceNumber": 1,
+        "enumeration": "Volume 1",
+        "chronology": "2021",
+        "barcode": "0987654111",
+        "accessionNumber": "2015.1",
+        "callNumber": "BF2050 .M335 2000",
+        "discoverySuppress": false,
+        "copyNumber": "175143",
+        "receiptDate": "2020-01-10T00:00:00.000Z",
+        "receivingStatus": "Claim sent",
+        "claimingInterval": 14,
+        "internalNote": "Internal note for Send Claim action",
+        "externalNote": "External note for Send Claim action to share with Vendor",
+        "statusUpdatedDate": "2020-01-10T00:00:00.000Z",
+        "supplement": true,
+        "isBound": true,
+        "claimSequence": {
+          "id": "7c1e2f4a-3b5d-4e6f-8a9b-0c1d2e3f4a5b",
+          "stage": 2
+        }
+      }
+    }
+  ],
+  "totalRecords": 1
+}

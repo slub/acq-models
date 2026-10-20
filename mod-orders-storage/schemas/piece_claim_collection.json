@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Collection of pieces written by a claim",
+  "type": "object",
+  "properties": {
+    "pieceClaims": {
+      "description": "Pieces written by a claim",
+      "type": "array",
+      "id": "pieceClaims",
+      "items": {
+        "type": "object",
+        "$ref": "piece_claim.json"
+      }
+    },
+    "totalRecords": {
+      "description": "The number of objects contained in this collection",
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "pieceClaims"
+  ]
+}

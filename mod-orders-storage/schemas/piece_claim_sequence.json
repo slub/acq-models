@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Position of a piece in its claim sequence; managed by the claim process, ignored on generic piece writes",
+  "javaType": "org.folio.rest.jaxrs.model.PieceClaimSequence",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "UUID of the claim sequence the piece is progressing in",
+      "$ref": "../../common/schemas/uuid.json"
+    },
+    "stage": {
+      "description": "Position of the last stage sent; the next sequence claim uses stage + 1. Absent = no stage of this sequence sent yet, the next claim uses stage 1",
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "id"
+  ]
+}
