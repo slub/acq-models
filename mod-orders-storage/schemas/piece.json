@@ -213,6 +213,10 @@
       "type": "integer",
       "x-fqm-essential": true
     },
+    "claimSequence": {
+      "description": "Claim sequence and stage the piece has reached; set only via POST /orders-storage/pieces-batch/claims, ignored on other piece writes",
+      "$ref": "piece_claim_sequence.json"
+    },
     "internalNote": {
       "description": "Internal note for Send Claim action",
       "type": "string",
