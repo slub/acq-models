@@ -56,6 +56,10 @@
       "description": "Specifies the time interval, in days, within which claims or disputes must be initiated",
       "type": "integer"
     },
+    "claimSequenceId": {
+      "description": "UUID of the claim sequence used to claim the pieces of this PO line; absent = claim by interval",
+      "$ref": "../../common/schemas/uuid.json"
+    },
     "collection": {
       "description": "whether or not this purchase order line is for a collection",
       "type": "boolean",
