@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "Position of a piece in its claim sequence; managed by the claim process, ignored on generic piece writes",
-  "javaType": "org.folio.rest.jaxrs.model.PieceClaimSequence",
+  "description": "Position of a piece in its claim sequence",
+  "javaType": "org.folio.rest.jaxrs.model.PieceClaimingSequence",
   "type": "object",
   "properties": {
     "id": {
-      "description": "UUID of the claim sequence the piece is progressing in",
+      "description": "UUID of the claim sequence the piece is progressing in (the PO line's sequence at the last sequence claim)",
       "$ref": "../../common/schemas/uuid.json"
     },
     "stage": {

@@ -213,9 +213,9 @@
       "type": "integer",
       "x-fqm-essential": true
     },
-    "claimSequence": {
-      "description": "Claim sequence and stage the piece has reached; set only via POST /orders-storage/pieces-batch/claims, ignored on other piece writes",
-      "$ref": "piece_claim_sequence.json"
+    "claiming": {
+      "description": "Claiming state (claim sequence position), set by mod-orders when it claims the piece",
+      "$ref": "piece_claiming.json"
     },
     "internalNote": {
       "description": "Internal note for Send Claim action",
