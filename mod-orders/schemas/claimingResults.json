@@ -28,6 +28,47 @@
             "type": "object",
             "$ref": "../../../raml-util/schemas/error.schema",
             "readonly": true
+          },
+          "deliveryType": {
+            "description": "How the claim reaches the vendor: MANUAL = outside FOLIO (no export job, the user contacts the vendor), INTEGRATION = through a Claims integration. INTEGRATION for pieces claimed without claim sequence",
+            "type": "string",
+            "enum": [
+              "MANUAL",
+              "INTEGRATION"
+            ],
+            "readonly": true
+          },
+          "transmissionMethod": {
+            "description": "Transmission method of the applied claim sequence stage; absent for MANUAL stages and pieces claimed without claim sequence",
+            "type": "string",
+            "enum": [
+              "FTP",
+              "File download",
+              "Email"
+            ],
+            "readonly": true
+          },
+          "claimSequenceId": {
+            "description": "UUID of the claim sequence the piece was claimed by; absent for pieces claimed without claim sequence",
+            "type": "string",
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$",
+            "readonly": true
+          },
+          "stage": {
+            "description": "Position of the applied claim sequence stage (1, 2, 3, ...); absent for pieces claimed without claim sequence",
+            "type": "integer",
+            "minimum": 1,
+            "readonly": true
+          },
+          "stageName": {
+            "description": "Name of the applied claim sequence stage; absent for pieces claimed without claim sequence",
+            "type": "string",
+            "readonly": true
+          },
+          "claimingInterval": {
+            "description": "Claiming interval (in days) written to the piece: the stage interval for claim sequence pieces, otherwise the interval of the request",
+            "type": "integer",
+            "readonly": true
           }
         },
         "required": [
