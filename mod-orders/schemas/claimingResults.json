@@ -49,9 +49,9 @@
             "readonly": true
           },
           "sequence": {
-            "description": "Claim sequence and position of the applied stage, as stored in piece.claiming.sequence; absent for pieces claimed without claim sequence",
+            "description": "Claim sequence and position of the applied stage, as stored in piece.claim.sequence; absent for pieces claimed without claim sequence",
             "type": "object",
-            "$ref": "../../mod-orders-storage/schemas/piece_claiming_sequence.json",
+            "$ref": "../../mod-orders-storage/schemas/piece_claim_sequence.json",
             "readonly": true
           },
           "interval": {
