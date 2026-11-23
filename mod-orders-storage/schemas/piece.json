@@ -213,9 +213,9 @@
       "type": "integer",
       "x-fqm-essential": true
     },
-    "claiming": {
-      "description": "Claiming state (claim sequence position); written by mod-orders when it claims the piece, stored as sent by every piece update and dropped on create",
-      "$ref": "piece_claiming.json"
+    "claim": {
+      "description": "Claim state (claim sequence position); written by mod-orders when it claims the piece, stored as sent by every piece update and dropped on create",
+      "$ref": "piece_claim.json"
     },
     "internalNote": {
       "description": "Internal note for Send Claim action",

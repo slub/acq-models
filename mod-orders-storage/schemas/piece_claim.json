@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "Claiming state of a piece, set by mod-orders when it claims the piece",
-  "javaType": "org.folio.rest.jaxrs.model.PieceClaiming",
+  "description": "Claim state of a piece, set by mod-orders when it claims the piece",
+  "javaType": "org.folio.rest.jaxrs.model.PieceClaim",
   "type": "object",
   "properties": {
     "sequence": {
       "description": "Claim sequence the piece is progressing in. Absent = the piece is not claimed by a sequence",
-      "$ref": "piece_claiming_sequence.json"
+      "$ref": "piece_claim_sequence.json"
     }
   },
   "additionalProperties": false

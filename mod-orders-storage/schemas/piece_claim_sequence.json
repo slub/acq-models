@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "Position of a piece in its claim sequence",
-  "javaType": "org.folio.rest.jaxrs.model.PieceClaimingSequence",
+  "javaType": "org.folio.rest.jaxrs.model.PieceClaimSequence",
   "type": "object",
   "properties": {
     "id": {
