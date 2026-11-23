@@ -37,14 +37,6 @@
       "type": "integer",
       "minimum": 1,
       "maximum": 3650
-    },
-    "internalNote": {
-      "description": "Internal note for claims sent at this stage",
-      "type": "string"
-    },
-    "externalNote": {
-      "description": "External note to share with the vendor for claims sent at this stage",
-      "type": "string"
     }
   },
   "additionalProperties": false,
